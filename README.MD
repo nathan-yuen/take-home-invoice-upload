@@ -1,3 +1,16 @@
+# Requirments
+
+## API 
+- An endpoint for uploading PDF invoice
+- An endpoint for retriving details of specific parsed invoice
+- An endpoint for retriving upload stats of all users
+
+## Frontend
+- Client app the uses the endpoints
+- Displays the contents of the stats endpoint in a table
+- Displays the details of each parsed document 
+- A form for user to upload inovices
+
 # Execution
 
 ## To Run
@@ -14,8 +27,10 @@
 
 # Design Choices
 
-I have limited experience with ASP.NET. Please kindly ignore my Java styles formatting in certain classes.
-This was great excercise overall.
+## Tech Stack
+- Backend: .NET Core
+- DB: 
+- Frontend: React, Material-UI
 
 ## Scaffolding
 - Strucutre of the app was based on official [React template](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa/react)
@@ -29,6 +44,7 @@ Template based approach, with easy configuration files
 - Find extaction rules from config file that with the corresponding field name
 - Use rules (string matching, regex) to extract desired values
 - Repeat until queue of fields are exhausted 
+
 
 ## Data Storage
 - In-Memory DB (DataTable) was used for quick iteration and demoing-purpose
@@ -53,6 +69,8 @@ Template based approach, with easy configuration files
 - Light-weight default setup, with separation
 
 ## Nice-To-Haves
+- Stored timestamp should be UTC
+- Use live foreign exchange API
 - Config management system
 - Config version is decided on upload date or invoice date, allowing wider support of various format
 - Ideally, text extraction could be further enhanced with Machine Learning

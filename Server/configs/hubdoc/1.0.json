@@ -1,0 +1,35 @@
+{
+    "type": "HubDoc",
+    "version": "1.0",
+    "lookup": {
+        "currency": {
+            "startsWith": "Total Due ",
+            "offset": 1
+        },        
+        "invoiceDate": {
+            "startsWith": "Invoice ",
+            "regex": "Invoice (\\+?\\d+) (.*)",
+            "group": 2
+        },
+        "vendorName":  {
+            "relativeTo": "invoiceDate",
+            "offset": 1
+        },
+        "totalAmount": {
+            "startsWith": "Total ",
+            "regex": "Total [\\p{Sc}](\\d*.\\d*)[\\p{Sc}]*",
+            "group": 1
+        },
+        "totalAmountDue": {
+            "startsWith": "Total Due ",
+            "regex": "Total Due [\\p{Sc}](\\d*.\\d*)[\\p{Sc}]*",
+            "group": 1
+        },
+        "taxAmount": {
+            "startsWith": ["Tax ", "GST "],
+            "regex": "(.*) (\\+?\\d+%) [\\p{Sc}](\\d*.\\d*)[\\p{Sc}]*",
+            "group": 3
+        }
+    }
+    
+}
