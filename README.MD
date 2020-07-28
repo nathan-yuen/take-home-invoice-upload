@@ -1,7 +1,11 @@
-# Requirments
+# Objective
+
+- To build an web app that allows user to upload pdf documents
+- Idenitfy and extract key information within the documents
 
 ## API 
 - An endpoint for uploading PDF invoice
+  - Attempt to extract following fields: `vendor`, `invoiceDate`, `totalAmount`, `totalDue`, `currency` & `tax`
 - An endpoint for retriving details of specific parsed invoice
 - An endpoint for retriving upload stats of all users
 
@@ -29,7 +33,7 @@
 
 ## Tech Stack
 - Backend: .NET Core
-- DB: 
+- DB: .NET in-memory `DataTable` (demo purpose)
 - Frontend: React, Material-UI
 
 ## Scaffolding
