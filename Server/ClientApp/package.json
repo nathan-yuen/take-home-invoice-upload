@@ -7,7 +7,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "filesize": "^6.1.0",
-    "merge": "^1.2.1",
+    "merge": "^2.1.1",
     "moment": "^2.27.0",
     "oidc-client": "^1.9.0",
     "react": "^16.0.0",
